@@ -2,6 +2,10 @@
 
 Script that takes a text file as input, and displays it nicely in Google Chrome.
 
+<div align="center">
+<img src="img/appscreen.png" alt="screen app" style="width: 600px;">
+</div>
+
 ## Installation
 
 Just run :

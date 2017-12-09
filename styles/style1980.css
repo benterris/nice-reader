@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Courier';
-    src: url('fonts/courier10pitch.pfb');
+    src: url('../fonts/courier10pitch.pfb');
 }
 
 body {
