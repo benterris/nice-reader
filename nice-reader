@@ -1,0 +1,49 @@
+#!/bin/bash
+
+installDir=""
+
+filePath="$1"
+styleOption="$2"
+
+style="$installDir/styles/stylePleiade.css"
+
+# parse the style requested, if any
+case $styleOption in
+  -p|--pleiade)
+    style="$installDir/styles/stylePleiade.css"
+    shift
+    ;;
+  -r|--reverse)
+    style="$installDir/styles/stylePleiadeReverse.css"
+    shift
+    ;;
+  -1|--1980)
+    style="$installDir/styles/style1980.css"
+    shift
+    ;;
+esac
+
+
+text=`cat $filePath`
+template=`cat $installDir/template.html`
+
+# replace in the template
+matchStyle="href=\""
+matchTitle="<h1>"
+matchText="<p>"
+
+template="${template%%${matchStyle}*}${matchStyle}${style}${template##*${matchStyle}}"
+template="${template%%${matchTitle}*}${matchTitle}${filePath}${template##*${matchTitle}}"
+template="${template%%${matchText}*}${matchText}${text}${template##*${matchText}}"
+
+# generate a temporary html file
+dest=/tmp/generated.html
+
+if ! [ -f "$dest" ]
+then
+    touch "$dest"
+fi
+echo "$template" > "$dest"
+
+
+google-chrome "$dest"

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Courier';
+    src: url('fonts/courier10pitch.pfb');
+}
+
+body {
+  font-family: Courier;
+  background-color: #888888;
+}
+
+h1 {
+  background: #555555;
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-right: 50%;
+  margin-top: 50px;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+p {
+  background: #aaaaaa;
+  padding-top: 10px;
+  margin-left: 30px;
+  font-size: 16px;
+  white-space: pre-wrap;
+}

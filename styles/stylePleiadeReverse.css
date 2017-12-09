@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'EB Garamond 08';
+    src: url('fonts/EBGaramond08-Regular.otf');
+}
+
+@font-face {
+    font-family: 'EB Garamond 12';
+    src: url('fonts/EBGaramond12-Regular.otf');
+}
+
+body {
+    background-color: #111110;
+    color: #afac97;
+    font-feature-settings: "kern", "liga", "dlig", "hlig", "cswh";
+}
+
+h1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: 'EB Garamond 12';
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'EB Garamond 08';
+    margin-left: 33%;
+    margin-right: 33%;
+    text-align: justify;
+    font-size: 20px;
+    white-space: pre-wrap;
+}
